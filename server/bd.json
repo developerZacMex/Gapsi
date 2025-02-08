@@ -1,47 +1,12 @@
 [
   {
-    "name": "go ",
-    "businessName": "da",
-    "address": "ew"
-  },
-  {
-    "name": "da ",
-    "businessName": "do ",
-    "address": "mi"
-  },
-  {
-    "name": "do ",
-    "businessName": "re",
-    "address": "mi"
-  },
-  {
-    "name": "mi ",
-    "businessName": "fa ",
-    "address": "sol"
-  },
-  {
-    "name": "laura",
+    "name": "Owen",
     "businessName": "develop",
-    "address": "guadalajara"
+    "address": "Zacatecas, México"
   },
   {
-    "name": "lauro",
-    "businessName": "main",
-    "address": "san antonio"
-  },
-  {
-    "name": "nemo",
-    "businessName": "delMar",
-    "address": "Oaxaca"
-  },
-  {
-    "name": "la ",
-    "businessName": "sol ",
-    "address": "si"
-  },
-  {
-    "name": "pablo",
-    "businessName": "paco ",
-    "address": "luis"
+    "name": "Luna Owen",
+    "businessName": "FullStack",
+    "address": "Alcadia Venustiano Carranza"
   }
 ]
