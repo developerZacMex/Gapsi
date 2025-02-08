@@ -4,6 +4,9 @@ desarrollo fullstack
 para clonar el repositorio
 git clone https://github.com/developerZacMex/Gapsi.git
 
+descargar las dependencias
+npm install
+
 para levantar el server node.js
 abrir un bash navegar a la carpeta 
 cd server

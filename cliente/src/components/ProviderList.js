@@ -24,7 +24,7 @@ const ProviderList = ({ providers = [], onDelete }) => {
   };
 
   return (
-    <Container>
+    <Container style={{ height: '100vh', border: '1px solid red' }}>
       <AutoSizer>
         {({ height, width }) => (
           <List
