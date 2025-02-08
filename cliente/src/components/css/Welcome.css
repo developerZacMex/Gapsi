@@ -1,0 +1,21 @@
+.welcome {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .candidate-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #666;
+  }

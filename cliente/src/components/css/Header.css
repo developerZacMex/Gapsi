@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  .logo {
+    height: 80px;
+    margin-right: 50px;
+    filter: invert(1); /* Aplica un filtro para invertir los colores del logo */
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+  }
