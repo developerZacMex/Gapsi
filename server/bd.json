@@ -28,5 +28,20 @@
     "name": "lauro",
     "businessName": "main",
     "address": "san antonio"
+  },
+  {
+    "name": "nemo",
+    "businessName": "delMar",
+    "address": "Oaxaca"
+  },
+  {
+    "name": "la ",
+    "businessName": "sol ",
+    "address": "si"
+  },
+  {
+    "name": "pablo",
+    "businessName": "paco ",
+    "address": "luis"
   }
 ]
