@@ -1,32 +1,26 @@
-import React from 'react';
-import { List, AutoSizer } from 'react-virtualized';
-import 'react-virtualized/styles.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProviders, deleteProvider } from '../redux/actions/providerActions';
 
-// Se reciben las propiedades providers y onDelete
+const ProviderList = () => {
+  const dispatch = useDispatch();
+  const providers = useSelector(state => state.providers.providers);
 
-const ProviderList = ({ providers, onDelete }) => {
-  const rowRenderer = ({ key, index, style }) => {
-    const provider = providers[index];
-    return (
-      <div key={key} style={style}>
-        {provider.name} - {provider.businessName} - {provider.address}
-        <button onClick={() => onDelete(provider.name)}>Eliminar</button>
-      </div>
-    );
-  };
+  useEffect(() => {
+    dispatch(getProviders(1, 10)); // Página 1, 10 proveedores por página
+  }, [dispatch]);
 
   return (
-    <AutoSizer>
-      {({ height, width }) => (
-        <List
-          width={width}
-          height={height}
-          rowCount={providers.length}
-          rowHeight={50}
-          rowRenderer={rowRenderer}
-        />
-      )}
-    </AutoSizer>
+    <div>
+      <ul>
+        {providers.map(provider => (
+          <li key={provider.name}>
+            {provider.name} - {provider.businessName} - {provider.address}
+            <button onClick={() => dispatch(deleteProvider(provider.name))}>Eliminar</button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
