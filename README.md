@@ -1,6 +1,18 @@
 # Gapsi
 desarrollo fullstack
 
+para levantar el server node.js
+abrir un bash navegar a la carpeta 
+cd server
+levantar con:
+node index.js
+
+para levantar front react
+abrir una terminal y navegar 
+cd cliente
+se levanta con:
+npm start
+
 request desde postman a node.js
 Solicitud para agregar un provedor
 POST

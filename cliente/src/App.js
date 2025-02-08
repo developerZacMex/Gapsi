@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
 import ProviderForm from './components/ProviderForm';
-import ProviderList from './components/ProviderList';
+import ProviderContainer from './containers/ProviderContainer';
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <Welcome />
       <ProviderForm />
-      <ProviderList />
+      <ProviderContainer />
     </div>
   );
 };

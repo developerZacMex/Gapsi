@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+# Ignore node_modules
+node_modules/
+
+# Ignore Material-UI files
+material-ui/
+
 # testing
 /coverage
 
