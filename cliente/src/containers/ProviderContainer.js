@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProviders, deleteProvider } from '../redux/actions/providerActions';
 import ProviderList from '../components/ProviderList';
-
-//patrón de diseño contenedor/componente
-//patrón de diseño modulo (se organiza el código en módulos con directorios como components, conrainers, redux, etc).
+// pasa los provedores al provider list
 const ProviderContainer = () => {
   const dispatch = useDispatch();
   const providers = useSelector(state => state.providers.providers);
