@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProvider } from '../redux/actions/providerActions';
+import { TextField, Button, Container } from '@material-ui/core';
 
 const ProviderForm = () => {
   const [name, setName] = useState('');
@@ -17,12 +18,37 @@ const ProviderForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" required />
-      <input type="text" value={businessName} onChange={(e) => setBusinessName(e.target.value)} placeholder="Razón Social" required />
-      <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Dirección" required />
-      <button type="submit">Agregar Proveedor</button>
-    </form>
+    <Container>
+      <form onSubmit={handleSubmit}>
+        <TextField
+          label="Nombre"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          fullWidth
+          margin="normal"
+        />
+        <TextField
+          label="Razón Social"
+          value={businessName}
+          onChange={(e) => setBusinessName(e.target.value)}
+          required
+          fullWidth
+          margin="normal"
+        />
+        <TextField
+          label="Dirección"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          required
+          fullWidth
+          margin="normal"
+        />
+        <Button type="submit" variant="contained" color="primary">
+          Agregar Proveedor
+        </Button>
+      </form>
+    </Container>
   );
 };
 

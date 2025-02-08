@@ -1,26 +1,42 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getProviders, deleteProvider } from '../redux/actions/providerActions';
+import React from 'react';
+import { List, AutoSizer } from 'react-virtualized';
+import { Button, Container, ListItem, ListItemText } from '@material-ui/core';
+import 'react-virtualized/styles.css';
 
-const ProviderList = () => {
-  const dispatch = useDispatch();
-  const providers = useSelector(state => state.providers.providers);
-
-  useEffect(() => {
-    dispatch(getProviders(1, 10)); // Página 1, 10 proveedores por página
-  }, [dispatch]);
+const ProviderList = ({ providers = [], onDelete }) => {
+  const rowRenderer = ({ key, index, style }) => {
+    const provider = providers[index];
+    return (
+      <ListItem key={key} style={style} button>
+        <ListItemText
+          primary={`${provider.name} - ${provider.businessName}`}
+          secondary={provider.address}
+        />
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => onDelete(provider.name)}
+        >
+          Eliminar
+        </Button>
+      </ListItem>
+    );
+  };
 
   return (
-    <div>
-      <ul>
-        {providers.map(provider => (
-          <li key={provider.name}>
-            {provider.name} - {provider.businessName} - {provider.address}
-            <button onClick={() => dispatch(deleteProvider(provider.name))}>Eliminar</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Container>
+      <AutoSizer>
+        {({ height, width }) => (
+          <List
+            width={width}
+            height={height}
+            rowCount={providers.length}
+            rowHeight={50}
+            rowRenderer={rowRenderer}
+          />
+        )}
+      </AutoSizer>
+    </Container>
   );
 };
 
